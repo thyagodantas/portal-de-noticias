@@ -118,6 +118,11 @@ section.featured-news > .center {
   z-index: 2;
 }
 
+.title-featured-description a {
+  color: white;
+  text-decoration: none;
+}
+
 .title-featured-description h2 {
   font-size: 54px;
   margin: 20px 0;
@@ -158,8 +163,9 @@ section.other-news h2 {
 
 .box-latest-single {
   width: 48%;
-  height: 80%; /* ALERTA PARA MUDAR CASO OCORRA ALGUM PROBLEMA NAS ÚLTIMAS NOTÍCIAS*/
+  height: 600px; /* ALERTA PARA MUDAR CASO OCORRA ALGUM PROBLEMA NAS ÚLTIMAS NOTÍCIAS*/
   margin-right: 2%;
+  margin-bottom: 2%;
   background-color: white;
   padding-bottom: 20px;
   border-radius: 10px;
@@ -320,10 +326,14 @@ section.news {
     margin-bottom: 40px;
   }
 
+  .most-read {
+    margin-top: 60px;
+  }
+
   .box-latest-single {
     width: 100%;
     margin-right: 0;
-    height: 50%;
+    height: 16.5%;
     margin-bottom: 20px;
   }
 

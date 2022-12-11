@@ -5,15 +5,11 @@
     <div class="img-featured">
       <div class="overlay-featured"></div>
       <div class="title-featured-description">
-        <h2>Quer fugir das praias no verão?</h2>
-        <p>
-          Veja os melhores destinos para uma viagem a dois, com seu grupo ou até
-          mesmo sozinho. Aproveite o calor longe das praias, curta lagos,
-          cachoeiras e muito mais nesses destinos incríveis.
-        </p>
+        <a href="<%= posts[0].slug %>"><h2><%= posts[0].titulo %></h2> </a>
+        <p><%- posts[0].descricaoCurta %>...</p>
       </div>
       <!--title-featured-description-->
-      <img src="../public/images/landscape.jpg" alt="lake.png" />
+      <img src="<%= posts[0].imagem %>" alt="lake.png" />
     </div>
     <!--img-featured-->
   </div>
@@ -27,90 +23,39 @@
     <br /><br />
     <div class="center">
       <div class="latest">
+        <% for(let i = 1; i < posts.length; i++) { %>
         <div class="box-latest-single">
-          <img src="../public/images/news.png" alt="" />
+          <img src="<%= posts[i].imagem %>" alt="" />
           <div class="container-news-single">
-            <h3>DICA DE AVENTURA</h3>
-            <h2>Como encarar o surf mesmo no frio</h2>
-            <p>
-              A água gelada e o vento pode acabar com a sua felicidade de ir
-              para a água. Cientistas afirmam que a chance de hipotermia é real
-              e você precisa se cuidar. Veja como.
-            </p>
-            <a href="/encarar-o-surf">Saiba mais</a>
+            <h3><%= posts[i].categoria %></h3>
+            <h2><%= posts[i].titulo %></h2>
+            <p><%- posts[i].descricaoCurta %></p>
+            <a href="<%= posts[i].slug %>">Saiba mais</a>
           </div>
         </div>
         <!--box-latest-single-->
-        <div class="box-latest-single">
-          <img src="../public/images/news.png" alt="" />
-          <div class="container-news-single">
-            <h3>DICA DE AVENTURA</h3>
-            <h2>Como encarar o surf mesmo no frio</h2>
-            <p>
-              A água gelada e o vento pode acabar com a sua felicidade de ir
-              para a água. Cientistas afirmam que a chance de hipotermia é real
-              e você precisa se cuidar. Veja como.
-            </p>
-            <a href="/encarar-o-surf">Saiba mais</a>
-          </div>
-        </div>
-        <!--box-latest-single-->
+        <% } %>
       </div>
       <!--latest-->
       <div class="most-read">
         <h3>Mais lidas</h3>
         <div class="most-read-news">
+          <% for(let i = 0; i < postsTop.length; i++) { %>
           <div class="most-read-news-single">
-            <img src="../public/images/nature.png" alt="" />
+            <img src="<%= postsTop[i].imagem %>" alt="" />
             <div class="text-most-read-single">
-              <h4>NATUREZA</h4>
+              <h4><%= postsTop[i].titulo %></h4>
               <p>
-                A importância da floresta do ártico para a biodiversidade
-                mundial. Qual o impacto o degelo na fauna e flora?
+                <%- postsTop[i].descricaoCurta %>... -
+                <span style="font-size: 12px; font-weight: bold"
+                  >(<%= postsTop[i].views%> views)</span
+                >
               </p>
-              <a href="/encarar-o-surf">Saiba mais</a>
+              <a href="<%= postsTop[i].slug %>">Saiba mais</a>
             </div>
             <!--text-most-read-single-->
           </div>
-          <!--most-read-news-single-->
-          <div class="most-read-news-single">
-            <img src="../public/images/nature.png" alt="" />
-            <div class="text-most-read-single">
-              <h4>NATUREZA</h4>
-              <p>
-                A importância da floresta do ártico para a biodiversidade
-                mundial. Qual o impacto o degelo na fauna e flora?
-              </p>
-              <a href="/encarar-o-surf">Saiba mais</a>
-            </div>
-            <!--text-most-read-single-->
-          </div>
-          <!--most-read-news-single-->
-          <div class="most-read-news-single">
-            <img src="../public/images/nature.png" alt="" />
-            <div class="text-most-read-single">
-              <h4>NATUREZA</h4>
-              <p>
-                A importância da floresta do ártico para a biodiversidade
-                mundial. Qual o impacto o degelo na fauna e flora?
-              </p>
-              <a href="/encarar-o-surf">Saiba mais</a>
-            </div>
-            <!--text-most-read-single-->
-          </div>
-          <!--most-read-news-single-->
-          <div class="most-read-news-single">
-            <img src="../public/images/nature.png" alt="" />
-            <div class="text-most-read-single">
-              <h4>NATUREZA</h4>
-              <p>
-                A importância da floresta do ártico para a biodiversidade
-                mundial. Qual o impacto o degelo na fauna e flora?
-              </p>
-              <a href="/encarar-o-surf">Saiba mais</a>
-            </div>
-            <!--text-most-read-single-->
-          </div>
+          <% } %>
           <!--most-read-news-single-->
         </div>
         <!--most-read-news-->
