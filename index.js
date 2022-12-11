@@ -9,7 +9,7 @@ const Posts = require("./Posts.js");
 
 mongoose
   .connect(
-    "mongodb+srv://root:news@newscluster.6tn6bcu.mongodb.net/portalNews?retryWrites=true&w=majority",
+    "mongodb+srv://root:<password>@newscluster.6tn6bcu.mongodb.net/portalNews?retryWrites=true&w=majority",
     { useNewUrlParser: true, useUnifiedTopology: true }
   )
   .then(() => {
